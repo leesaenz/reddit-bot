@@ -15,9 +15,7 @@ const r = new Snoowrap({
     api_requests_per_minute: 1
 });
 
-//Getting top posts on r/all of the week, limited to 10,000
 r.getTop('all', { time: 'week', limit: 10000 }).map(post => {
-    //Adding all authors of those posts to a subreddit as contributors
     r.getSubreddit(process.env.SUBREDDIT).addContributor({ name: post.author.name });
 }
 ).then(console.log('done'));

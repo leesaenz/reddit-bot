@@ -12,10 +12,12 @@ const r = new Snoowrap({
     username: process.env.REDDIT_USER,
     password: process.env.REDDIT_PASS,
     automatic_retries: true,
-    api_requests_per_minute: 60
+    api_requests_per_minute: 1
 });
 
-// Printing a list of the titles on the front page
-r.getTop('all', { time: 'today', limit: 100 }).map(post =>
-    post.author.name
-).then(console.log);
+//Getting top posts on r/all of the week, limited to 10,000
+r.getTop('all', { time: 'week', limit: 10000 }).map(post => {
+    //Adding all authors of those posts to a subreddit as contributors
+    r.getSubreddit(process.env.SUBREDDIT).addContributor({ name: post.author.name });
+}
+).then(console.log('done'));

@@ -6,7 +6,7 @@ const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 
 const r = new Snoowrap({
-    userAgent: 'some-description',
+    userAgent: 'mikethebot',
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     username: process.env.REDDIT_USER,

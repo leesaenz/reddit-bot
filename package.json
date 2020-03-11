@@ -1,0 +1,27 @@
+{
+  "name": "mikethebot",
+  "version": "1.0.0",
+  "description": "A Reddit bot that mass invites users from a subreddit.",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "open": "^7.0.2",
+    "reddit-oauth-helper": "^0.3.0",
+    "snoostorm": "^1.3.0",
+    "snoowrap": "^1.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leesaenz/reddit-bot.git"
+  },
+  "author": "Lee Saenz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leesaenz/reddit-bot/issues"
+  },
+  "homepage": "https://github.com/leesaenz/reddit-bot#readme"
+}

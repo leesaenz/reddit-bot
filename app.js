@@ -13,14 +13,8 @@ const r = new Snoowrap({
   automatic_retries: false,
   api_requests_per_minute: 60,
   refreshToken: process.env.REFRESH_TOKEN,
-  accessToken: process.env.ACCESS_TOKEN
+  accessToken: process.env.ACCESS_TOKEN,
 });
-
-function delay(t, data) {
-  return new Promise(resolve => {
-    setTimeout(resolve.bind(null, data), t);
-  });
-}
 
 function addUser(sub, user) {
   r.getSubreddit(sub).addContributor({ name: user });
@@ -33,11 +27,11 @@ function listUsernames(user) {
 
 topList = r.getTop('all', {
   time: 'today',
-  limit: 50
+  limit: 50,
 });
 
 topList
-  .map(post => {
+  .map((post) => {
     addUser(process.env.SUBREDDIT, post.author.name);
     //listUsernames(post.author.name);
   })

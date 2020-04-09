@@ -1,6 +1,6 @@
 # reddit-bot
 
-The purpose of this bot is to add the top 25 users of r/all as approved users to a private subreddit.
+The purpose of this bot is to add the top 50 users of r/all as approved users to a private subreddit.
 
 ## Setup
 
